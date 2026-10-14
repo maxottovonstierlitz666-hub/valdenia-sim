@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Вальдения — политический симулятор</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div id="turn">—</div>
+  <div id="bars"></div>
+  <div id="fac"></div>
+</header>
+
+<main id="main"></main>
+
+<footer>
+  <button id="bAI">ИИ: промпт</button>
+  <button id="bRe">Разведка (2)</button>
+  <button id="bNew">Заново</button>
+</footer>
+
+<div id="modal" class="hide">
+  <div class="box">
+    <div class="tag">Мост к Honer AI</div>
+    <p style="font-size:13px">1. Скопируй промпт. 2. Вставь его в чат с Honer AI.
+    3. Ответ (JSON) вставь в нижнее поле. 4. Нажми «Применить».</p>
+    <textarea id="promptBox" readonly></textarea>
+    <button class="mini acc" id="copyBtn">Скопировать промпт</button>
+    <button class="mini" id="localBtn">Локальное событие</button>
+    <div class="note" id="copyHint"></div>
+    <textarea id="aiIn" placeholder="Вставь сюда JSON-ответ от ИИ"></textarea>
+    <button class="mini acc" id="applyAI">Применить</button>
+    <button class="mini" id="closeModal">Закрыть</button>
+    <div class="note" id="aiHint"></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="data.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
